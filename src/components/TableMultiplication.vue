@@ -25,7 +25,9 @@
     },
     computed: {
       nvalue: function () {
+        // eslint-disable-next-line no-console
         console.log("computed...");
+        // eslint-disable-next-line no-console
         console.log(
           "this.n = >" +
           this.n +
