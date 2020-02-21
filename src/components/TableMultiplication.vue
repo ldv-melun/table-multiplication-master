@@ -1,11 +1,10 @@
 <template>
   <div>
     <h3>Table de {{nvalue}}</h3>
-    <table class="table-multiplication" align="center">
-      <thead></thead>
+    <table class="table-multiplication" >
       <tbody>
-      <TableRow v-for="v in (1, 10)" v-bind:key="v"
-                v-bind:j="nvalue" v-bind:i="v"/>
+         <TableRow v-for="v in (1, 10)" v-bind:key="v"
+                   v-bind:j="nvalue" v-bind:i="v"/>
       </tbody>
     </table>
     <br/>
@@ -18,7 +17,10 @@
   export default {
     name: "TableMultiplication",
     props: {
-      n: Number,
+      n: {
+        type: Number,
+        default: 5
+      }
     },
     components: {
       TableRow
@@ -44,6 +46,8 @@
 <style scoped>
   .table-multiplication {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     background-color: lightblue;
   }
 </style>
